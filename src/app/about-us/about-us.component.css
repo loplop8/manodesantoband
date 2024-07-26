@@ -1,0 +1,75 @@
+/* Estilos para la sección 'about-us' */
+.about-us {
+    padding: 40px 0;
+  }
+  
+  /* Estilo para las imágenes con dimensiones fijas */
+  .fixed-dimensions {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Esto asegura que la proporción se mantenga */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para el aumento y sombra */
+  }
+  
+  /* Estilo para aumentar la imagen al pasar el ratón */
+  .fixed-dimensions:hover {
+    transform: scale(1.2); /* Aumenta el tamaño de la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra sutil */
+    z-index: 3;
+  }
+  
+  /* Definición de la animación para el contenido de la sección */
+  @keyframes slideInOut {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    80% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+  
+  /* Aplicación de la animación al contenido al entrar en el viewport */
+  .sticky { 
+      opacity: 0; /* Inicialmente oculto */
+      transform: translateX(-100%); 
+      animation: slideInOut 12s ease-out infinite; /* Aplica la animación en bucle */
+  }
+
+
+  @keyframes slideOutIn {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    80% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+  
+  /* Aplicación de la animación al contenido al entrar en el viewport */
+  .stickyOut { 
+      opacity: 0; /* Inicialmente oculto */
+      transform: translateX(100%); 
+      animation: slideOutIn 12s ease-out infinite; /* Aplica la animación en bucle */
+  }
+  
+  

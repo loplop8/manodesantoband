@@ -1,0 +1,29 @@
+<div class="container about-us animadoOculto ">
+  <div class="row justify-content-center ">
+    <div class="col-12 text-center mb-4 sticky">
+      <h1>Quienes somos</h1>
+      <p class="lead">Somos una banda de música sevillana que lleva su arte por toda España.</p>
+      <p class="lead">Trabajamos tanto en eventos privados como en locales de copas.</p>
+    </div>
+  </div>
+
+  <div class="row justify-content-center stickyOut">
+    <div class="col-12 col-md-8 mb-4">
+      <img src="./../../assets/img/GrupoByN.jpg" alt="Grupo completo" class="img-fluid rounded " />
+    </div>
+  </div>
+
+  <div class="row justify-content-center sticky">
+    <div class="col-12">
+      <div class="row text-center">
+        <div class="col-12 col-sm-6 col-md-3 mb-4" *ngFor="let integrante of integrantes">
+          <a href="{{integrante.enlace}}"><img [src]="'./../../assets/img/' + integrante.foto" alt="{{integrante.nombre}}" class="img-fluid fixed-dimensions rounded-circle mb-2" /></a>
+          <div class="description">
+            <h5>{{integrante.nombre}}</h5>
+            <p class="text-muted">{{integrante.descripcion}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
